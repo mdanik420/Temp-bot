@@ -1,13 +1,13 @@
-const fs = require("fs");
 module.exports.config = {
-	name: "amibusy",
-    version: "1.0.1",
-	hasPermssion: 0,
-	credits: "VanHung - Fixed by LTD", 
-	description: "hihihihi",
-	commandCategory: "no prefix",
-	usages: "🤣",
-    cooldowns: 5, 
+  name: "goiadmin",
+    version: "1.0.0",
+    permission: 0,
+    credits: "nayan",
+    description: "mention",
+    prefix: true,
+    category: "user",
+    usages: "tag",
+    cooldowns: 5,
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
