@@ -1,15 +1,15 @@
 const fs = require("fs");
 module.exports.config = {
 	name: "🤗",
-prefix: true
     version: "1.0.1",
-	permssion: 0,
+	hasPermssion: 0,
 	credits: "VanHung - Fixed by LTD", 
 	description: "hihihihi",
-	category: "no prefix",
+	commandCategory: "no prefix",
 	usages: "🤗",
     cooldowns: 5, 
 };
+
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
