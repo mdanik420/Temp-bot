@@ -1,7 +1,7 @@
 const fs = require("fs");
 module.exports.config = {
 	name: "🤗",
-	prefix: false
+	prefix: true
     version: "1.0.1",
 	Permssion: 0,
 	credits: "VanHung - Fixed by LTD", 
