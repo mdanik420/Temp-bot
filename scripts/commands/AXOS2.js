@@ -1,9 +1,9 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "amiotmknk"
-prefix: true
+	name: "🤗",
+	prefix: false,
     version: "1.0.1",
-	Permssion: 0,
+	permssion: 0,
 	credits: "VanHung - Fixed by LTD", 
 	description: "hihihihi",
 	category: "no prefix",
