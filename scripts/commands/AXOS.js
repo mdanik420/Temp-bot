@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "goiadmin",
+  name: "axis",
     version: "1.0.0",
     permission: 0,
     credits: "nayan",
