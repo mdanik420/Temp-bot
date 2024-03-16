@@ -1,13 +1,14 @@
+const fs = require("fs");
 module.exports.config = {
-  name: "axis",
-    version: "1.0.0",
-    permission: 0,
-    credits: "nayan",
-    description: "mention",
-    prefix: true,
-    category: "user",
-    usages: "tag",
-    cooldowns: 5,
+	name: "amibusy",
+prefix: true,
+    version: "1.0.1",
+	permssion: 0,
+	credits: "VanHung - Fixed by LTD", 
+	description: "hihihihi",
+	category: "no prefix",
+	usages: "🤣",
+    cooldowns: 5, 
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
@@ -23,4 +24,4 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  }
+	}
