@@ -6,7 +6,7 @@ module.exports.config = {
 	Permssion: 0,
 	credits: "VanHung - Fixed by LTD", 
 	description: "hihihihi",
-	Category: "no prefix",
+	category: "no prefix",
 	usages: "🤗",
     cooldowns: 5, 
 };
