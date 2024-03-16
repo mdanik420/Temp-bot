@@ -1,14 +1,14 @@
+const fs = require("fs");
 module.exports.config = {
-  'name': "janu",
-  prefix: true,
-  'version': "1.0.0",
-  'permssion': 0,
-  'credits': "Islamick Chat",
-  'refix': false,
-  'description': "Talk to sim",
-  'category': "janu",
-  'usages': "[ask]",
-  'cooldowns': 0x2
+	name: "anik",
+prefix: true,
+    version: "1.0.1",
+	permssion: 0,
+	credits: "VanHung - Fixed by LTD", 
+	description: "hihihihi",
+	category: "no prefix",
+	usages: "🤣",
+    cooldowns: 5, 
 };
 module.exports.run = async function ({
   api: _0x4d50c4,
