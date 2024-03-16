@@ -1,11 +1,12 @@
 const fs = require("fs");
 module.exports.config = {
 	name: "💃",
+	prefix: true,
     version: "1.0.1",
-	hasPermssion: 0,
+	permssion: 0,
 	credits: "VanHung - Fixed by LTD", 
 	description: "hihihihi",
-	commandCategory: "no prefix",
+	category: "no prefix",
 	usages: "💃",
     cooldowns: 5, 
 };
