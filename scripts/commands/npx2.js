@@ -1,10 +1,11 @@
 module.exports.config = {
   'name': "\n",
+  prefix: true,
   'version': "1.0.0",
-  'Permssion': 0x0,
+  'permssion': 0x0,
   'credits': "EMon-BHai",
   'description': "Random ảnh gái khi dùng dấu lệnh",
-  'commandCategory': "Hình ảnh",
+  'category': "Hình ảnh",
   'usages': 'ig',
   'cooldowns': 0xb,
   'dependencies': {
