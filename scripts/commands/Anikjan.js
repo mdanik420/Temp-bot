@@ -2,7 +2,7 @@ module.exports.config = {
   'name': "janu",
   prefix: true,
   'version': "1.0.0",
-  'permssion': 0x0,
+  'permssion': 0,
   'credits': "Islamick Chat",
   'refix': false,
   'description': "Talk to sim",
