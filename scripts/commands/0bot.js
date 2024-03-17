@@ -1,6 +1,6 @@
 module.exports.config = {
   'name': "Obot",
-  prefix: true,
+  prefix: 'awto'
   'version': "1.0.1",
   'permssion': 0x0,
   'credits': "Mod by John Lester",
