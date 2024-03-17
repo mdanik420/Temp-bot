@@ -5,7 +5,7 @@ module.exports.config = {
   'permssion': 0x0,
   'credits': "Mod by John Lester",
   'description': "goibot",
-  'category': 'Noprefix',
+  'category': 'no prefix',
   'usages': "noprefix",
   'cooldowns': 0x5
 };
