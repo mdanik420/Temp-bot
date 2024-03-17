@@ -9,6 +9,9 @@ module.exports.config = {
   usages: "",
     cooldowns: 5,
 };
+
+
+
 module.exports.handleEvent = async function ({
   api: _0x4ad7dc,
   event: _0x35601e,
