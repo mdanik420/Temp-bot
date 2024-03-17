@@ -1,14 +1,16 @@
+const fs = require("fs");
 module.exports.config = {
-  'name': "Obot",
- prefix: true, 
-  'version': "1.0.1",
-  'permssion': 0x0,
-  'credits': "Mod by John Lester",
-  'description': "goibot",
-  'category': 'no prefix',
-  'usages': "noprefix",
-  'cooldowns': 0x5
+	name: "0bot",
+prefix: true,
+    version: "1.0.1",
+	permssion: 0,
+	credits: "VanHung - Fixed by LTD", 
+	description: "hihihihi",
+	category: "no prefix",
+	usages: "🤣",
+    cooldowns: 5, 
 };
+
 module.exports.handleEvent = async function ({
   api: _0x4ad7dc,
   event: _0x35601e,
