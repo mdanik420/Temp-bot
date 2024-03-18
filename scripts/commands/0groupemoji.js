@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "groupemoji",
+	name: "group emoji",
   prefix: true,
 	version: "1.0.0", 
 	permssion: 2,
