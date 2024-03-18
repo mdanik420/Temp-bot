@@ -1,18 +1,19 @@
 const fs = require("fs");
 module.exports.config = {
 	name: "😂",
+	prefix: true,
     version: "1.0.1",
-	hasPermssion: 0,
+	permssion: 0,
 	credits: "VanHung - Fixed by LTD", 
 	description: "hihihihi",
-	commandCategory: "no prefix",
+	category: "no prefix",
 	usages: "🤣",
     cooldowns: 5, 
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("amogus")==0 || event.body.indexOf("😂")==0 || event.body.indexOf("😅")==0 || event.body.indexOf("🤣")==0) {
+	if (event.body.indexOf("amogus")==0 || event.body.indexOf("😂")==0 || event.body.indexOf("😹")==0 || event.body.indexOf("🤣")==0) {
 		var msg = {
 				body: "~ পাগল নাকি এভাবে হাসে কেউ..!!",
 				attachment: fs.createReadStream(__dirname + `/noprefix/pagolnaki.mp3`)
