@@ -6,7 +6,7 @@ module.exports.config = {
 	credits: "HungCatMoi",
 	description: "Change your group Emoji",
 	category: "Box", 
-	usages: "groupemoji [name]", 
+	usages: "group emoji [name]", 
 	cooldowns: 0,
 	dependencies: [] 
 };
