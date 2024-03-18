@@ -88,7 +88,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     let allThread = global.data.allThreadID || [];
     let can = 0, canNot = 0;
     let text = `message from admins\n\ntime : ${gio}\nadmin name : ${await Users.getNameUser(senderID)}\nmessage : ${args.join(" ")}\n\nreply to this message if you want to respond from this announce.`;
-    if(event.type == "message_reply") text = await getAtm(messageReply.attachments, `message from admins\n\ntime : ${gio}\nadmin name : ${await Users.getNameUser(senderID)}\nmessage : ${args.join(" ")}\n\nreply to this message if you want to respond from this announce.`);
+    if(event.type == "message_reply") text = await getAtm(messageReply.attachments, `message from admins\n\ntime : ${gio}\nadmin name : ${await Users.getNameUser(senderID)}\nmessage : ${args.join(" ")}\n\n আপনি যদি কোনো অভিযোগ জানাতে চান তাহলে এই বার্তার উত্তর দিন.`);
     await new Promise(resolve => {
         allThread.forEach((each) => {
             try {
