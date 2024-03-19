@@ -1,5 +1,6 @@
 module.exports.config = {
   name: "adminNoti",
+  prefix: true,
   eventType: [
     "log:thread-admins",
     "log:thread-name",
