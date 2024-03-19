@@ -1,12 +1,12 @@
 module.exports.config = {
     name: "dp",
-prefix: true,
-    version: "2.6.0",
+  prefix: true,
+    version: "7.3.1",
     permssion: 0,
-    credits: "Islamick Chat",
-    description: "",
-    category: "Love",
-    usages: "[tag]",
+    credits: "John Lester",
+    description: "Get fuck",
+    category: "nsfw",
+    usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
         "axios": "",
