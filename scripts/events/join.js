@@ -89,7 +89,7 @@ module.exports.run = async function ({
           'recursive': true
         });
       }
-      const _0x111817 = _0xf1a901(_0x49eae6(__dirname, "cache", "joinGif", "randomgif"));
+      const _0x111817 = _0xf1a901(_0x49eae6(__dirname, "cache", "joinGif", "emon2.mp4"));
       if (_0x109700(_0x2b9f88)) {
         formPush = {
           'body': msg,
