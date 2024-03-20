@@ -79,7 +79,7 @@ module.exports.run = async function ({
       }
       _0x420185.sort((_0xfcb520, _0x587f25) => _0xfcb520 - _0x587f25);
       if (typeof _0x4620ec.customJoin == "undefined") {
-        msg = "আসসালামু আলাইকুম🌺 🥀༊🤗😻🤗 {name}  😍.\n\n🌸༊🥀۞Wellcome-!!-🌻🥀 To {threadName}\n{type} You are the {soThanhVien} member of this group🌻.\n\n𝄞❤️⋆⃝⑅⑅⃝•BOT OWNER♥🖤 𝔸ℕ𝕀𝕂 ℂℍ𝕆𝕎𝔻𝕌ℝ𝕐 and 𝕊𝔸𝔻𝕀𝕂𝕌ℝℝ𝔸ℍ𝕄𝔸ℕ-𝕊𝔸ℍ𝕀𝔻❤️😇Never Try To Spam Here🚫\n\n 『𝐀𝐍𝐈𝐊 𝐂𝐇𝐎𝐖𝐃𝐔𝐑𝐘♥ 𝐒𝐀𝐃𝐈𝐊𝐔𝐑𝐑𝐀𝐇𝐌𝐀𝐍 𝐒𝐀𝐇𝐈𝐃 』\n\n🥰 Follow Our Group Rules✅\n\n🤖 Hi I'm CYBER-CAT bot messenger use help to see command 🤖.";
+        msg = "আসসালামু আলাইকুম🌺 🥀༊🤗😻🤗 {name}  😍.\n\n🌸༊🥀۞Wellcome-!!-🌻🥀 To {threadName}\n{type} You are the {soThanhVien} member of this group🌻.\n\n𝄞❤️⋆⃝⑅⑅⃝•BOT OWNER♥🖤 𝔸ℕ𝕀𝕂 ℂℍ𝕆𝕎𝔻𝕌ℝ𝕐 and 𝕊𝔸𝔻𝕀𝕂𝕌ℝℝ𝔸ℍ𝕄𝔸ℕ-𝕊𝔸ℍ𝕀𝔻❤️😇Never Try To Spam Here🚫\n\n 『𝐀𝐍𝐈𝐊 𝐂𝐇𝐎𝐖𝐃𝐔𝐑𝐘♥ 𝐒𝐀𝐃𝐈𝐊𝐔𝐑𝐑𝐀𝐇𝐌𝐀𝐍 𝐒𝐀𝐇𝐈𝐃 』\n\n🥰 Follow Our Group Rules✅\n\n🤖 Hi I'm ANIK-BOT bot messenger use help to see command 🤖.";
       } else {
         msg = _0x4620ec.customJoin;
       }
