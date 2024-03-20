@@ -98,7 +98,7 @@ module.exports.run = async function ({
         };
       } else {
         if (_0x111817.length != 0x0) {
-          const _0x1fef9f = _0x49eae6(__dirname, "cache", "joinGif", 'randomgif', '' + _0x111817[Math.floor(Math.random() * _0x111817.length)]);
+          const _0x1fef9f = _0x49eae6(__dirname, "cache", "joinGif', '' + _0x111817[Math.floor(Math.random() * _0x111817.length)]);
           formPush = {
             'body': msg,
             'attachment': _0x2037da(_0x1fef9f),
