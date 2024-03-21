@@ -31,10 +31,11 @@ async function downloadMusicFromYoutube(link, path) {
 module.exports.config = {
     name: "gan",
     version: "1.0.0",
-    hasPermssion: 0,
+    permssion: 0,
+	prefix: true,
     credits: "D-Jukie",
     description: "Phát nhạc thông qua link YouTube hoặc từ khoá tìm kiếm",
-    commandCategory: "tiện ích",
+    category: "tiện ích",
     usages: "[searchMusic]",
     cooldowns: 0
 };
