@@ -13,7 +13,7 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("amogus")==0 || event.body.indexOf("Ami")==0 || event.body.indexOf("🙋")==0 || event.body.indexOf("🙋‍♂️")==0) {
+	if (event.body.indexOf("voiceckanik")==0 || event.body.indexOf("Ami")==0 || event.body.indexOf("🙋")==0 || event.body.indexOf("🙋‍♂️")==0) {
 		var msg = {
 				body:"স্যার কেমন আছেন আপনি",
 				attachment: fs.createReadStream(__dirname + `/noprefix/sir.mp3`)
