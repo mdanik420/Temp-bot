@@ -1,11 +1,11 @@
 module.exports.config = {
     name: "autotime",
+  prefix: true, 
   version: "1.0.0",
   permission: 0,
   credits: "Nayan",
   description: "msg",
-  prefix: true, 
-  category: "user", 
+  user", 
   usages: "",
   cooldowns: 5,
   dependencies: {
