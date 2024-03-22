@@ -13,7 +13,7 @@ prefix: true,
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("amogus")==0 || event.body.indexOf("Amogus")==0 || event.body.indexOf("🤗")==0 || event.body.indexOf("😌")==0) {
+	if (event.body.indexOf("voiceckanik")==0 || event.body.indexOf("Amogus")==0 || event.body.indexOf("🤗")==0 || event.body.indexOf("😌")==0) {
 		var msg = {
 				body: "-হুম আমিও তোমাকে অনেক ভালোবাসি..!!",
 				attachment: fs.createReadStream(__dirname + `/noprefix/amiotmkonk.mp3`)
