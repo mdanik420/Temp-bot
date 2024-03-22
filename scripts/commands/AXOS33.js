@@ -8,7 +8,7 @@ module.exports.config = {
 	description: "hihihihi",
 	category: "no prefix",
 	usages: "sir",
-    cooldowns: 5, 
+    cooldowns: 5,  
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
