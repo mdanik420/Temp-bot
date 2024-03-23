@@ -19,7 +19,7 @@ module.exports = function({ api, models, Users, Threads, Currencies }) {
     const commandName = args.shift()?.toLowerCase();
     var command = commands.get(commandName);
     const replyAD = 'mode - only bot admin can use bot';
-    const notApproved = `এই বাক্স approved নয়.
+    const notApproved = `এই গ্ৰুপ approved নয়.
 বট অপারেটরদের কাছে approve অনুরোধ পাঠাতে.\nuse "${PREFIX}request" 
 অন্যথায় বট এডমিন কে মেসেজ করুন 👉 m.me/100015487808389`;
     if (typeof body === "string" && body.startsWith(`${PREFIX}request`) && approval) {
