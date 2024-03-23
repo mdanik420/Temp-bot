@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "fuck",
+    name: "romdate",
   prefix: true,
     version: "7.3.1",
     permssion: 0,
