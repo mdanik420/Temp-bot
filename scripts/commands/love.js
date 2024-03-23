@@ -39,7 +39,7 @@ module.exports.onLoad = async () => {
     });
   }
   if (!_0xc707ef(_0x21c7eb)) {
-    await _0x29bf1b('https://drive.google.com/uc?id=1N2tFzXJUJ3p472FqRCI2ZkUYPMZHSsua', _0x21c7eb);
+    await _0x29bf1b('https://drive.google.com/uc?id=1OIhSqD6ODJb03pKBeiAekbr2pz1HbcyQ', _0x21c7eb);
   }
 };
 async function makeImage({
