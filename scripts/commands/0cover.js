@@ -1,11 +1,12 @@
 module.exports.config = {
   name: "fbcover",
+  prefix: true,
   version: "1.0.0",
-  hasPermssion: 0,
+  permssion: 0,
   credits: "Shiron",
   description: "Create facebook service style cover photo",
   usePrefix: true,
-  commandCategory: "image",
+  category: "image",
   usages: "Create facebook service style cover photo",
   cooldowns: 0,
   dependencies: {
