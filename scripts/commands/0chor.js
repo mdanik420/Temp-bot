@@ -85,7 +85,7 @@ module.exports.run = async function ({
     senderID: _0x5b283b
   } = _0x1c1a41;
   var _0x275937 = Object.keys(_0x1c1a41.mentions)[0x0];
-  let _0x3c4738 = _0x1c1a41.mentions[_0x275937].replace('@', '');
+  let _0x3c4738 = _0x1c1a41.mentions[_0x175937].replace('@', '');
   if (!_0x275937) {
     return _0x3d6631.sendMessage("Please tag 1 person", _0x3a70bf, _0x222aac);
   } else {
