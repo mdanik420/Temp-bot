@@ -3,7 +3,7 @@ module.exports.config = {
     prefix: true,
   'version': '2.6.0',
   'permssion': 0x0,
-  'credits': "Islamick Chat",
+  'credits': "modified by anik",
   'description': '',
   'category': "Love",
   'usages': "[tag]",
