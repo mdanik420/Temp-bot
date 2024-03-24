@@ -1,35 +1,34 @@
 module.exports.config = {
-name: "fbcover",
-  prefix: true,
-version: "1.0.0",
-permssion: 0,
-credits: "Abdulla Rahaman",
-description: "use but can't change credit",
-category: "fbcover",
-usages: "facebook cover photo make by Abdulla Rahaman",
-cooldowns: 0,
-dependencies: {
+  name: "fbcover",
+  version: "1.0.0",
+  hasPermssion: 0,
+  credits: "Shiron",
+  description: "Create facebook service style cover photo",
+  usePrefix: true,
+  commandCategory: "image",
+  usages: "Create facebook service style cover photo",
+  cooldowns: 0,
+  dependencies: {
     "fs-extra": "",
     "request": "",
     "axios": ""
- }
+  }
 };
-module.exports.run = async function ({ api, args, event, permssion }) {
-if ((this.config.credits) != "Abdulla Rahaman") { return api.sendMessage(`[ WARNING ] - Abdulla Rahaman Don't credits modules ${this.config.name} was changed to ${this.config.credits} bởi ADMINBOT ${global.config.BOTNAME} 😐 Stop now!!!`, event.threadID, event.messageID)}
-    const request = require('request');
+module.exports.run = async function({ api, args, event, permssion }) {
+  const request = require('request');
   const fs = require("fs-extra")
   const axios = require("axios")
   const { threadID, messageID, senderID, body } = event;
-  if(!args[0]) return api.sendMessage(' আসসালামু আলাইকুম 🥀Hey Itz Me 𝗖𝗬𝗕𝗘𝗥-𝗖𝗔𝗧 অনুগ্রহ করে টাইপ করুন /fbcover তারপর প্রাথমিক নাম লিখুন!!!', threadID, messageID)
-  else return api.sendMessage(`😍 আপনি প্রধান নাম বেছে নিয়েছেন:${args.join(" ").toUpperCase()}\n\n(এই বার্তার উত্তর দিন এবং আপনার দ্বিতীয় নাম নির্বাচন করুন)`,event.threadID, (err, info) => {
-     return global.client.handleReply.push({
-        type: "tenphu",
-        name: `fbcover`,
-        author: senderID,
-        tenchinh: args.join(" ").toUpperCase(),
-        messageID: info.messageID
-      });
-  },event.messageID);
+  if (!args[0]) return api.sendMessage('Please enter primary name!!!', threadID, messageID)
+  else return api.sendMessage(`🔍 You have chosen the main name as: ${args.join(" ").toUpperCase()}\n\n(Reply to this message and choose your secondary name)`, event.threadID, (err, info) => {
+    return global.client.handleReply.push({
+      type: "tenphu",
+      name: `fbcover`,
+      author: senderID,
+      tenchinh: args.join(" ").toUpperCase(),
+      messageID: info.messageID
+    });
+  }, event.messageID);
 }
 module.exports.handleReply = async function({ api, event, args, handleReply, client, __GLOBAL, Threads, Users, Currencies }) {
   module.exports.circle = async (image) => {
@@ -44,9 +43,9 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
   const request = require('request');
   const fs = require("fs-extra")
   const axios = require("axios")
-  let pathImg = __dirname + `/cache/${senderID+20}.png`;
-  let pathAva = __dirname + `/cache/${senderID+30}.png`;
-  let pathLine = __dirname + `/cache/${senderID+40}.png`;
+  let pathImg = __dirname + `/cache/${senderID + 20}.png`;
+  let pathAva = __dirname + `/cache/${senderID + 30}.png`;
+  let pathLine = __dirname + `/cache/${senderID + 40}.png`;
   const path = require("path")
   const Canvas = require("canvas")
   const __root = path.resolve(__dirname, "cache");
@@ -56,38 +55,37 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
     case "tenphu": {
       var tenchinh = handleReply.tenchinh;
       api.unsendMessage(handleReply.messageID);
-      return api.sendMessage(`😍 আপনি দ্বিতীয় নাম বেছে নিয়েছেন${event.body.toUpperCase()}\n\n(
-এই বার্তার উত্তর দিন আপনার ফোন নম্বর দিন)`,threadID, function (err, info) {
+      return api.sendMessage(`🔍 You have chosen a subname ${event.body.toUpperCase()}\n\n(Reply to this message enter your phone number)`, threadID, function(err, info) {
         return global.client.handleReply.push({
           type: "sdt",
-          name: `fbcover`,
+          name: `coverfb`,
           author: senderID,
           tenphu: event.body,
           tenchinh: tenchinh,
           messageID: info.messageID
         });
-      },messageID)
+      }, messageID)
     }
     case "sdt": {
       api.unsendMessage(handleReply.messageID);
-      return api.sendMessage(`আপনি নাম্বার নির্বাচন করেছেন: ${event.body.toUpperCase()}\n\(আপনার ইমেল লিখে এই বার্তাটির উত্তর দিন)`,threadID, function (err, info) {
+      return api.sendMessage(`🔍 You have selected SDT as : ${event.body.toUpperCase()}\n(Reply this message to enter your email)`, threadID, function(err, info) {
         return global.client.handleReply.push({
           type: "email",
-          name: `fbcover`,
+          name: `coverfb`,
           author: senderID,
           sdt: event.body,
           tenchinh: handleReply.tenchinh,
           tenphu: handleReply.tenphu,
           messageID: info.messageID
         });
-      },messageID) 
+      }, messageID)
     }
     case "email": {
       api.unsendMessage(handleReply.messageID);
-      return api.sendMessage(`😘 আপনি আপনার ইমেল নির্বাচন করেছেন : ${event.body.toUpperCase()}\n\(আপনার ঠিকানা লিখে এই বার্তাটির উত্তর দিন)`,threadID, function (err, info) {
+      return api.sendMessage(`🔍 You have selected email as : ${event.body.toUpperCase()}\n(Reply this message to enter your address)`, threadID, function(err, info) {
         return global.client.handleReply.push({
           type: "color",
-          name: `fbcover`,
+          name: `coverfb`,
           author: senderID,
           sdt: handleReply.sdt,
           tenchinh: handleReply.tenchinh,
@@ -95,14 +93,14 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
           email: event.body,
           messageID: info.messageID
         });
-      },messageID) 
+      }, messageID)
     }
     case "color": {
       api.unsendMessage(handleReply.messageID);
-      return api.sendMessage(`আপনি ঠিকানা নির্বাচন করেছেন : ${event.body.toUpperCase()}\n আপনার কভার পিক এর ব্যাকগ্রাউন্ড কালার লিখে এই বার্তাটির উত্তর দিন(enter no as default color)`,threadID, function (err, info) {
+      return api.sendMessage(`🔍 You have selected the address as : ${event.body.toUpperCase()}\nReply this message to enter your background color (enter no as default color)`, threadID, function(err, info) {
         return global.client.handleReply.push({
           type: "create",
-          name: `fbcover`,
+          name: `coverfb`,
           author: senderID,
           sdt: handleReply.sdt,
           tenchinh: handleReply.tenchinh,
@@ -111,7 +109,7 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
           email: handleReply.email,
           messageID: info.messageID
         });
-      },messageID) 
+      }, messageID)
     }
     case "create": {
       var color = event.body
@@ -122,11 +120,11 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
       var subname = handleReply.tenphu.toUpperCase()
       var phoneNumber = handleReply.sdt.toUpperCase()
       api.unsendMessage(handleReply.messageID);
-      api.sendMessage(` আপনার কভার প্রায় হয়ে গেছে অনুগ্রহ করে অপেক্ষা করুন⏳ ইমেজার শুরু করা হচ্ছে!`,threadID, (err, info) => {
-      setTimeout(() => {
-              api.unsendMessage(info.messageID);
-     }, 1000);
-          }, messageID);
+      api.sendMessage(`⏳ Đang khởi tạo chương trình tạo ảnh!`, threadID, (err, info) => {
+        setTimeout(() => {
+          api.unsendMessage(info.messageID);
+        }, 1000);
+      }, messageID);
       //=================CONFIG IMG=============//
       let avtAnime = (
         await axios.get(encodeURI(
@@ -149,10 +147,10 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
       fs.writeFileSync(pathLine, Buffer.from(hieuung, "utf-8"));
       var avatar = await this.circle(pathAva);
       //=================DOWNLOAD FONTS=============//
-      if(!fs.existsSync(__dirname+`/cache/UTMAvoBold.ttf`)) { 
-          let getfont2 = (await axios.get(`https://drive.google.com/u/0/uc?id=1DuI-ou9OGEkII7n8odx-A7NIcYz0Xk9o&export=download`, { responseType: "arraybuffer" })).data;
-           fs.writeFileSync(__dirname+`/cache/UTMAvoBold.ttf`, Buffer.from(getfont2, "utf-8"));
-        };
+      if (!fs.existsSync(__dirname + `/cache/UTMAvoBold.ttf`)) {
+        let getfont2 = (await axios.get(`https://drive.google.com/u/0/uc?id=1DuI-ou9OGEkII7n8odx-A7NIcYz0Xk9o&export=download`, { responseType: "arraybuffer" })).data;
+        fs.writeFileSync(__dirname + `/cache/UTMAvoBold.ttf`, Buffer.from(getfont2, "utf-8"));
+      };
       //=================DRAW BANNER=============//
       let baseImage = await loadImage(pathImg);
       let baseAva = await loadImage(avatar);
@@ -161,7 +159,7 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
       let ctx = canvas.getContext("2d");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-      Canvas.registerFont(__dirname+`/cache/UTMAvoBold.ttf`, { family: "UTMAvoBold" });
+      Canvas.registerFont(__dirname + `/cache/UTMAvoBold.ttf`, { family: "UTMAvoBold" });
       ctx.strokeStyle = "rgba(255,255,255, 0.2)";
       ctx.lineWidth = 3;
       ctx.font = "100px UTMAvoBold";
@@ -194,8 +192,8 @@ module.exports.handleReply = async function({ api, event, args, handleReply, cli
       fs.writeFileSync(pathImg, imageBuffer);
       return api.sendMessage(
         { attachment: fs.createReadStream(pathImg) },
-        threadID,messageID
+        threadID, messageID
       );
     }
   }
-                                                                         }
+}
