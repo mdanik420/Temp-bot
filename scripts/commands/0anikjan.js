@@ -13,17 +13,20 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async function ({ api, event }) {
-    if (!(event.body.indexOf("anik") === 0 || event.body.indexOf("Anik") === 0 || event.body.indexOf("Jan") === 0 || event.body.indexOf("jan") === 0 || event.body.indexOf("অনিক") === 0)) return;
+   const content = event.body ? event.body : '';
+    const body = content.toLowerCase();
+    if (!(body.indexOf("anik") === 0 || body.indexOf("Anik") === 0 || body.indexOf("Jan") === 0 || body.indexOf("jan") === 0 || body.indexOf("অনিক") === 0)) return;
     const args = event.body.split(/\s+/);
     args.shift();
+    
 
-    let { messageID, threadID, senderID, body } = event;
+    let { messageID, threadID, senderID } = event;
     let tid = threadID,
         mid = messageID;
-    const content = encodeURIComponent(args.join(" "));
+    const contents = encodeURIComponent(args.join(" "));
     if (!args[0]) return api.sendMessage(" hm bolo bby😸 ...", tid, mid);
     try {
-        const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=bn&message=${content}&filter=true`);
+        const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=bn&message=${contents}&filter=true`);
         const respond = res.data.success;
         if (res.data.error) {
             api.sendMessage(`Error: ${res.data.error}`, tid, (error, info) => {
