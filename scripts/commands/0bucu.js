@@ -1,6 +1,6 @@
 module.exports.config = {
     name: "bucu",
-    prefix: false,
+    prefix: true,
     version: "2.0.0",
     permssion: 0,
     credits: "Joshua Sy",
