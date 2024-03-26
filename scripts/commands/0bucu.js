@@ -1,10 +1,11 @@
 module.exports.config = {
     name: "bucu",
+    prefix: false,
     version: "2.0.0",
-    hasPermssion: 0,
+    permssion: 0,
     credits: "Joshua Sy",
     description: "subo etits",
-    commandCategory: "general",
+    category: "general",
     usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
