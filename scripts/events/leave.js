@@ -1,30 +1,61 @@
 module.exports.config = {
-	name: "leave",
-	eventType: ["log:unsubscribe"],
-	version: "1.0.0",
-	credits: "Nayan",
-	description: "notify leave.",
+  'name': "leave",
+  'eventType': ["log:unsubscribe"],
+  'version': "1.0.0",
+  'credits': "Mirai Team",
+  'description': "Notify About Members Removed Or That Have Left The Group.",
+  'dependencies': {
+    'fs-extra': '',
+    'path': ''
+  }
 };
-
-module.exports.run = async function({ api, event, Users, Threads }) {
-	if (event.logMessageData.leftParticipantFbId == api.getCurrentUserID()) return;
-	const { createReadStream, existsSync, mkdirSync } = global.nodemodule["fs-extra"];
-	const { join } =  global.nodemodule["path"];
-	const { threadID } = event;
-	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
-	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "লিভ নেউয়ার জন্য ধন্যবাদ 🤢" : "Kicked by Administrator";
-	const path = join(__dirname, "nayan", "leaveGif");
-	const gifPath = join(path, `l.gif`);
-	var msg, formPush
-
-	if (existsSync(path)) mkdirSync(path, { recursive: true });
-
-	(typeof data.customLeave == "undefined") ? msg = "তুই {name} গ্রুপে থাকার যোগ্য না আবাল .\n\n{type} " : msg = data.customLeave;
-	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
-
-	if (existsSync(gifPath)) formPush = { body: msg, attachment: createReadStream(gifPath) }
-	else formPush = { body: msg }
-	
-	return api.sendMessage(formPush, threadID);
-}
+module.exports.run = async function ({
+  api: _0x1e9e05,
+  event: _0x43fec5,
+  Users: _0x5e2e91,
+  Threads: _0x31a742
+}) {
+  if (_0x43fec5.logMessageData.leftParticipantFbId == _0x1e9e05.getCurrentUserID()) {
+    return;
+  }
+  const {
+    createReadStream: _0x4ec07b,
+    existsSync: _0x15971a,
+    mkdirSync: _0x559af2
+  } = global.nodemodule["fs-extra"];
+  const {
+    join: _0x87484e
+  } = global.nodemodule.path;
+  const {
+    threadID: _0x5d0aca
+  } = _0x43fec5;
+  const _0x595cc3 = global.data.threadData.get(parseInt(_0x5d0aca)) || (await _0x31a742.getData(_0x5d0aca)).data;
+  const _0x12f3e7 = global.data.userName.get(_0x43fec5.logMessageData.leftParticipantFbId) || (await _0x5e2e91.getNameUser(_0x43fec5.logMessageData.leftParticipantFbId));
+  const _0x344aee = _0x43fec5.author == _0x43fec5.logMessageData.leftParticipantFbId ? "আহারে চলে গেলো 😾 কিন্তু কই পালাইবি 😹ভিডিও দেখে যা🥵🥱" : "বালপাকনামির কারণে কিক খাইলো😿🥵";
+  const _0x40dbdb = _0x87484e(__dirname, "cache", "leavemp4");
+  const _0x522820 = _0x87484e(_0x40dbdb, "kick.gif");
+  var _0x3756db;
+  var _0x592ca5;
+  if (_0x15971a(_0x40dbdb)) {
+    _0x559af2(_0x40dbdb, {
+      'recursive': true
+    });
+  }
+  if (typeof _0x595cc3.customLeave == "undefined") {
+    _0x3756db = "~ পালাইছে রে পালাইছে🤣. \n{name}\nReason: {type}.";
+  } else {
+    _0x3756db = _0x595cc3.customLeave;
+  }
+  _0x3756db = _0x3756db.replace(/\{name}/g, _0x12f3e7).replace(/\{type}/g, _0x344aee);
+  if (_0x15971a(_0x522820)) {
+    _0x592ca5 = {
+      'body': _0x3756db,
+      'attachment': _0x4ec07b(_0x522820)
+    };
+  } else {
+    _0x592ca5 = {
+      'body': _0x3756db
+    };
+  }
+  return _0x1e9e05.sendMessage(_0x592ca5, _0x5d0aca);
+};
