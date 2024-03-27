@@ -35,7 +35,7 @@ handleCommand.permissionNotEnough= আরে বলদ এই কমান্ড
 handleCommand.cantSetMessageReaction=having some unexpected error at setMessageReaction, error: %1
 handleCommand.executeCommand=\ntime and date : %1\ncommand used : %2\nuser id : %3\ngroup id : %4\nargs included : %5\nprocessing time : %6ms
 handleCommand.commandError=having some unexpected error when using command %1, error : %2
-handleCommand.notMatched=this command does not require a prefix to start with.\n\nPleace Without Prefix Use This Command
+handleCommand.notMatched=এই কমান্ড use করার জন্য কোন prefix দরকার নেই.\n\n অনুগ্রহ করে prefix ছাড়াই এই কমান্ডটি ব্যবহার করুন 
 handleCommand.noPrefix=this command has no command config "usePrefix" property
 handleCommand.commandNotFound=the command you used doesn't exist.
 
