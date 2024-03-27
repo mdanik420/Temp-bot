@@ -58,7 +58,7 @@ module.exports.run = async function ({ api, event, args}) {
       const message = "❤️‍🩹 𝗖𝗵𝗼𝗼𝘀𝗲 𝗮𝗻 𝗼𝗽𝘁𝗶𝗼𝗻𝘀 𝗕𝗮𝗯𝘆 <💝\n"+"✿━━━━━━━━━━━━━━━━━━━━━━━✿\n"+ albumOptions.map((option, index) => `🎀 | ${index + 11}. ${option} 🐤`).join("\n")+"\n✿━━━━━━━━━━━━━━━━━━━━━━━✿\n🔰 | 𝐏𝐚𝐠𝐞 [ 𝟐/𝟐 ]\n✿━━━━━━━━━━━━━━━━━━━━━━━✿";
   await api.sendMessage({body: message,},event.threadID,(error, info) => {
   global.client.handleReply.push({
-    name: this.config.name,
+    name: this.config.name, 
     type: 'reply',
     messageID: info.messageID,
     author: event.senderID,
@@ -71,7 +71,7 @@ const validCommands = ['cartoon', 'photo', 'lofi', 'sad', 'islamic','funny','hor
   }
   if (args[0] === 'list'){
  try {
-   const lRes = await axios.get(`https://noobs-apihouse.onrender.com/dipto/album?list=dipto`);
+   const lRes = await axios.get(`https://noobs-api.onrender.com/dipto/album?list=dipto`);
 const data = lRes.data;
      api.sendMessage(`🖤 𝗧𝗼𝘁𝗮𝗹 𝘃𝗶𝗱𝗲𝗼 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗶𝗻 𝗮𝗹𝗯𝘂𝗺 🩵\n\n${data.data}`, event.threadID, event.messageID);
  } catch (error) {
