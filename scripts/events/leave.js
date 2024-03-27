@@ -32,7 +32,7 @@ module.exports.run = async function ({
   const _0x595cc3 = global.data.threadData.get(parseInt(_0x5d0aca)) || (await _0x31a742.getData(_0x5d0aca)).data;
   const _0x12f3e7 = global.data.userName.get(_0x43fec5.logMessageData.leftParticipantFbId) || (await _0x5e2e91.getNameUser(_0x43fec5.logMessageData.leftParticipantFbId));
   const _0x344aee = _0x43fec5.author == _0x43fec5.logMessageData.leftParticipantFbId ? "আহারে চলে গেলো 😾 কিন্তু কই পালাইবি 😹ভিডিও দেখে যা🥵🥱" : "বালপাকনামির কারণে কিক খাইলো😿🥵";
-  const _0x40dbdb = _0x87484e(__dirname, "cache", "leavemp4");
+  const _0x40dbdb = _0x87484e(__dirname, "cache", "kick.gif");
   const _0x522820 = _0x87484e(_0x40dbdb, "kick.gif");
   var _0x3756db;
   var _0x592ca5;
