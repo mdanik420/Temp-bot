@@ -14,7 +14,7 @@ module.exports.config = {
         usage: "{pn} <city name> - <color>"
 };
 
-          module.exports😗.run = async function ({ api, args, event }) {
+          module.exports.run = async function ({ api, args, event }) {
             let [cityName, colorOption] = args.join(' ').trim().split(/\s*-\s*/);
 
             try {
