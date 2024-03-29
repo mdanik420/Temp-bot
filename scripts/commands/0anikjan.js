@@ -15,7 +15,7 @@ module.exports.config = {
 module.exports.handleEvent = async function ({ api, event }) {
    const content = event.body ? event.body : '';
     const body = content.toLowerCase();
-    if (!(body.indexOf("anik") === 0 || body.indexOf("Anik") === 0 || body.indexOf("Jan") === 0 || body.indexOf("jan") === 0 || body.indexOf("অনিক") === 0)) return;
+    if (!(body.indexOf("anik") === 0 || body.indexOf("Anik") === 0 || body.indexOf("Jan") === 0 || body.indexOf("jan") === 0 || body.indexOf("বট") === 0 || body.indexOf("Bot") === 0 || body.indexOf("bot") === 0 || body.indexOf("অনিক") === 0)) return;
     const args = event.body.split(/\s+/);
     args.shift();
     
@@ -24,7 +24,7 @@ module.exports.handleEvent = async function ({ api, event }) {
     let tid = threadID,
         mid = messageID;
     const contents = encodeURIComponent(args.join(" "));
-    if (!args[0]) return api.sendMessage(" hm bolo bby😸 ...", tid, mid);
+    if (!args[0]) return api.sendMessage(" হে বলো জান আমি শুনছি...😘😍", tid, mid);
     try {
         const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=bn&message=${contents}&filter=true`);
         const respond = res.data.success;
